@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		AC2525ED299D2B4300030E23 /* OffersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2525EC299D2B4300030E23 /* OffersPage.swift */; };
+		AC47D0AE299FB6F600B40C21 /* DetailsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47D0AD299FB6F600B40C21 /* DetailsPage.swift */; };
+		AC47D0B129A01CF000B40C21 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47D0B029A01CF000B40C21 /* Categories.swift */; };
+		AC47D0B329A01D0100B40C21 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47D0B229A01D0100B40C21 /* Product.swift */; };
+		AC47D0B529A0229900B40C21 /* MenuManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47D0B429A0229900B40C21 /* MenuManager.swift */; };
+		AC47D0B729A022B100B40C21 /* OrderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC47D0B629A022B100B40C21 /* OrderManager.swift */; };
+		AC6AF95A299EC23A003DD055 /* MenuPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6AF959299EC23A003DD055 /* MenuPage.swift */; };
+		AC6AF95C299EC253003DD055 /* OrdersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6AF95B299EC253003DD055 /* OrdersPage.swift */; };
+		AC6AF95E299EC26E003DD055 /* InfoPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6AF95D299EC26E003DD055 /* InfoPage.swift */; };
+		AC6AF960299EC30F003DD055 /* ProductItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6AF95F299EC30F003DD055 /* ProductItem.swift */; };
 		AC9DD3D9299BF66200F7FCD7 /* CofeeMastersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DD3D8299BF66200F7FCD7 /* CofeeMastersApp.swift */; };
 		AC9DD3DB299BF66200F7FCD7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC9DD3DA299BF66200F7FCD7 /* ContentView.swift */; };
 		AC9DD3DD299BF66200F7FCD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC9DD3DC299BF66200F7FCD7 /* Assets.xcassets */; };
@@ -17,6 +26,15 @@
 
 /* Begin PBXFileReference section */
 		AC2525EC299D2B4300030E23 /* OffersPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OffersPage.swift; sourceTree = "<group>"; };
+		AC47D0AD299FB6F600B40C21 /* DetailsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPage.swift; sourceTree = "<group>"; };
+		AC47D0B029A01CF000B40C21 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		AC47D0B229A01D0100B40C21 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		AC47D0B429A0229900B40C21 /* MenuManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuManager.swift; sourceTree = "<group>"; };
+		AC47D0B629A022B100B40C21 /* OrderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderManager.swift; sourceTree = "<group>"; };
+		AC6AF959299EC23A003DD055 /* MenuPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuPage.swift; sourceTree = "<group>"; };
+		AC6AF95B299EC253003DD055 /* OrdersPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersPage.swift; sourceTree = "<group>"; };
+		AC6AF95D299EC26E003DD055 /* InfoPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoPage.swift; sourceTree = "<group>"; };
+		AC6AF95F299EC30F003DD055 /* ProductItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItem.swift; sourceTree = "<group>"; };
 		AC9DD3D5299BF66200F7FCD7 /* CofeeMasters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CofeeMasters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC9DD3D8299BF66200F7FCD7 /* CofeeMastersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CofeeMastersApp.swift; sourceTree = "<group>"; };
 		AC9DD3DA299BF66200F7FCD7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -41,6 +59,8 @@
 			children = (
 				AC9DD3D8299BF66200F7FCD7 /* CofeeMastersApp.swift */,
 				AC9DD3DA299BF66200F7FCD7 /* ContentView.swift */,
+				AC9DD3E6299C235100F7FCD7 /* Offer.swift */,
+				AC6AF95F299EC30F003DD055 /* ProductItem.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -49,9 +69,23 @@
 			isa = PBXGroup;
 			children = (
 				AC2525EC299D2B4300030E23 /* OffersPage.swift */,
-				AC9DD3E6299C235100F7FCD7 /* Offer.swift */,
+				AC6AF959299EC23A003DD055 /* MenuPage.swift */,
+				AC6AF95B299EC253003DD055 /* OrdersPage.swift */,
+				AC6AF95D299EC26E003DD055 /* InfoPage.swift */,
+				AC47D0AD299FB6F600B40C21 /* DetailsPage.swift */,
 			);
 			path = "Page Views";
+			sourceTree = "<group>";
+		};
+		AC47D0AF29A01CD500B40C21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AC47D0B029A01CF000B40C21 /* Categories.swift */,
+				AC47D0B229A01D0100B40C21 /* Product.swift */,
+				AC47D0B429A0229900B40C21 /* MenuManager.swift */,
+				AC47D0B629A022B100B40C21 /* OrderManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		AC9DD3CC299BF66200F7FCD7 = {
@@ -73,6 +107,7 @@
 		AC9DD3D7299BF66200F7FCD7 /* CofeeMasters */ = {
 			isa = PBXGroup;
 			children = (
+				AC47D0AF29A01CD500B40C21 /* Model */,
 				AC2525F0299D3D6E00030E23 /* Page Views */,
 				AC2525EE299D3D5400030E23 /* Views */,
 				AC9DD3DC299BF66200F7FCD7 /* Assets.xcassets */,
@@ -159,10 +194,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC47D0B529A0229900B40C21 /* MenuManager.swift in Sources */,
 				AC9DD3E7299C235100F7FCD7 /* Offer.swift in Sources */,
 				AC2525ED299D2B4300030E23 /* OffersPage.swift in Sources */,
+				AC6AF95A299EC23A003DD055 /* MenuPage.swift in Sources */,
+				AC47D0AE299FB6F600B40C21 /* DetailsPage.swift in Sources */,
 				AC9DD3DB299BF66200F7FCD7 /* ContentView.swift in Sources */,
+				AC47D0B329A01D0100B40C21 /* Product.swift in Sources */,
+				AC6AF960299EC30F003DD055 /* ProductItem.swift in Sources */,
+				AC6AF95E299EC26E003DD055 /* InfoPage.swift in Sources */,
+				AC47D0B129A01CF000B40C21 /* Categories.swift in Sources */,
+				AC6AF95C299EC253003DD055 /* OrdersPage.swift in Sources */,
 				AC9DD3D9299BF66200F7FCD7 /* CofeeMastersApp.swift in Sources */,
+				AC47D0B729A022B100B40C21 /* OrderManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,7 @@ struct ContentView: View {
 //            OffersPage()
 //        }
             TabView {
-                Text("Home")
+                MenuPage()
                     .tabItem {
                         Image(systemName: "cup.and.saucer")
                         Text("Menu")
@@ -26,12 +26,12 @@ struct ContentView: View {
                         Image(systemName: "tag")
                         Text("Offers")
                     }
-                Text("My Order")
+                OrdersPage()
                     .tabItem {
                         Image(systemName: "cart")
-                        Text("Cart")
+                        Text("Order")
                     }
-                Text("Info")
+                InfoPage()
                     .tabItem {
                         Image(systemName: "info.circle")
                         Text("info")
