@@ -13,6 +13,8 @@ struct DetailsPage: View {
     //We are creating this product variable, to bring the properties from the menu page to this page, so each product can render with the correct detailed information.
     var product: Product
     @EnvironmentObject var orderManager: OrderManager
+    //This variable is for letting us go back to the homepage after clicking the add to cart, and we call it after the action we want, so it will be called in the add to cart buttn
+    @Environment(\.dismiss) var dismiss
 
     //This is for chaging the stepper colors
     init(product: Product) {
@@ -50,12 +52,13 @@ struct DetailsPage: View {
                 }
                 .padding(30)
                 
-                Text("$\(Double(quantity)*product.price, specifier: "%.2f")")
+                Text("Subtotal $\(Double(quantity)*product.price, specifier: "%.2f")")
                     .bold()
                     .padding()
                 
                 Button("Add \(quantity) to Cart") {
                     orderManager.addToCart(product: product, quantity: quantity)
+                    dismiss()
                     print(orderManager.cart)
                 }
                 .padding()

@@ -20,7 +20,6 @@ struct OrdersPage: View {
                     .ignoresSafeArea()
                 if orderManager.cart.count == 0 {
                     Text("Your order is empty")
-                        .navigationTitle("Your Order")
                 } else {
                     List {
                         // A section is another container view
@@ -36,10 +35,14 @@ struct OrdersPage: View {
                             VStack {
                                 TextField("Your Name", text: $name)
                                     .textFieldStyle(.roundedBorder)
-                                Spacer().frame(height: 20)
+                                    .border(Color("Alternative2"))
+                                    .background(.pink)
+                                Spacer()
+                                    .frame(height: 20)
                                 TextField("Your Phone #", text: $phone)
                                     .keyboardType(.phonePad)
                                     .textFieldStyle(.roundedBorder)
+                                    .border(Color("Alternative2"))
                             } .padding(.vertical)
                         }.listRowBackground(Color("Background"))
                         
@@ -48,9 +51,11 @@ struct OrdersPage: View {
                                 Spacer()
                                 Text("TOTAL")
                                 Spacer()
-                                //                            Text("$ \(orderManager.total(), specifier: "%.2f")")
+                                Text("$ \(orderManager.calculateTotal(), specifier: "%.2f")")
+                                    .bold()
+                                Spacer()
                             }
-                        }.listRowBackground(Color("Background"))
+                        }.listRowBackground(Color(.clear))
                         
                         Section {
                             HStack {
@@ -69,11 +74,10 @@ struct OrdersPage: View {
                         }
                         .listSectionSeparatorTint(Color("Primary"))
                         .listStyle(.insetGrouped)
-                        //                    .navigationTitle("Your Order")
                     }
                 }
             }
-
+            .navigationTitle("Your Order")
         }
         
     }
