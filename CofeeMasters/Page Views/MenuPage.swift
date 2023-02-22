@@ -18,11 +18,11 @@ struct MenuPage: View {
                         //here we are just displaying the name of the category
                         Text(category.name)
                         
-                        ForEach(category.products) {item in
+                        ForEach(category.products) { product in
                             NavigationLink {
-                                DetailsPage()
+                                DetailsPage(product: product)
                             } label: {
-                                ProductItem(product: item)
+                                ProductItem(product: product)
                                 //this is how the label looked prior to importing the data with the Api
     //                            ProductItem(product: Product(id: 1, name: "BlackCoffee", description: "", price: 1.25, image: ""))
                             }

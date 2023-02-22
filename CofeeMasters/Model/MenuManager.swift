@@ -36,9 +36,9 @@ class MenuManager: ObservableObject {
             .responseDecodable(of: [Category].self) { response in
                 //here we are just validating that we are actually getting a JSON file with information
                 if let menuFromNetwork = response.value {
-                    //here we are setting the information to the menu variable from the struc
-                    print(menuFromNetwork)
+                    //here we are setting the information to the menu variable from the struct
                     self.menu = menuFromNetwork
+//                    print(menuFromNetwork)
                 }
             }
     }

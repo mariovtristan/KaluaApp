@@ -8,27 +8,41 @@
 import SwiftUI
 
 struct DetailsPage: View {
-    @State var quantity: Int = 1
     
-    init() { UIStepper.appearance().setDecrementImage(UIImage(systemName: "minus"), for: .normal)
+    @State var quantity: Int = 1
+    //We are creating this product variable, to bring the properties from the menu page to this page, so each product can render with the correct detailed information.
+    var product: Product
+    @EnvironmentObject var orderManager: OrderManager
+
+    //This is for chaging the stepper colors
+    init(product: Product) {
+        UIStepper.appearance().setDecrementImage(UIImage(systemName: "minus"), for: .normal)
         UIStepper.appearance().setIncrementImage(UIImage(systemName: "plus"), for: .normal)
+        self.product = product
     }
+    
     var body: some View {
         ScrollView {
             VStack {
-                Image("BlackCoffee")
+                Text(product.name)
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .foregroundColor(Color("Secondary"))
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.leading)
+                AsyncImage(url: product.imageUrl)
                     .cornerRadius(5)
                     .padding()
                     .frame(maxWidth: .infinity, idealHeight: 150, maxHeight: 150)
                     .padding(.top, 32)
-                Text("Freshly pulled shots of espresso combined with hot water")
+                Text(product.description)
                     .font(.callout)
                     .fontWeight(.medium)
                     .frame(maxWidth: .infinity)
                     .multilineTextAlignment(.leading)
                     .padding(24)
                 HStack {
-                    Text("$ 1.50")
+                    Text("$\(product.price, specifier: "%.2f")")
                         .frame(maxWidth: 50)
                         .padding(.leading, 35)
                     Stepper(value: $quantity, in: 1...10) {}
@@ -36,12 +50,13 @@ struct DetailsPage: View {
                 }
                 .padding(30)
                 
-                Text("Subtotal $ 1.50")
+                Text("$\(Double(quantity)*product.price, specifier: "%.2f")")
                     .bold()
                     .padding()
                 
                 Button("Add \(quantity) to Cart") {
-                    print("Button Tapped")
+                    orderManager.addToCart(product: product, quantity: quantity)
+                    print(orderManager.cart)
                 }
                 .padding()
                 .frame(width: 200)
@@ -51,11 +66,13 @@ struct DetailsPage: View {
                 .cornerRadius(25)
             }
         }
+        .background(Color("Alternative2"))
     }
 }
 
 struct DetailsPage_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsPage()
+        DetailsPage(product: Product(id: 1, name: "Dummy", description: "", price: 1.25, image: ""))
+            .environmentObject(OrderManager())
     }
 }

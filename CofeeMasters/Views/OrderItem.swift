@@ -8,13 +8,28 @@
 import SwiftUI
 
 struct OrderItem: View {
+    var item: (Product, Int)
+    @EnvironmentObject var orderManager: OrderManager
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            Text("\(item.1)x")
+            Text(item.0.name)
+            Spacer()
+            Text("\(Double(item.1)*item.0.price, specifier: "%.2f")")
+            Image(systemName: "trash")
+                .font(.title2)
+                .foregroundColor(Color("Ternary"))
+                .padding(.leading)
+                .onTapGesture {
+                    orderManager.removeProduct(product: item.0)
+                }
+        }
     }
 }
 
 struct OrderItem_Previews: PreviewProvider {
     static var previews: some View {
-        OrderItem()
+        OrderItem(item: (Product(id: 1, name: "Dummy", description: "", price: 1.25, image: ""), 6))
     }
 }

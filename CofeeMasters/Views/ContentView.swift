@@ -9,6 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     //This @State is pretty much useState in React
+    @EnvironmentObject var orderManager: OrderManager
+    
+    init() {
+        UITabBarItem.appearance().badgeColor = UIColor(Color("Ternary"))
+    }
 
     
     var body: some View {
@@ -31,6 +36,8 @@ struct ContentView: View {
                         Image(systemName: "cart")
                         Text("Order")
                     }
+                    .badge(orderManager.cart
+                        .count)
                 InfoPage()
                     .tabItem {
                         Image(systemName: "info.circle")

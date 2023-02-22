@@ -22,17 +22,17 @@ struct ProductItem: View {
                     Text("\(product.name)")
                         .font(.title3)
                         .fontWeight(.bold)
-                        .foregroundColor(Color("Primary"))
-                    
-                    Text("$ \(product.price)")
+                        .foregroundColor(Color("Alternative1"))
+                    //the second argument in the text here specifier: "%.2f" , what it does is takes the extra trailing zeros and cuts it to only 2 decimals
+                    Text("$ \(product.price, specifier: "%.2f")")
                         .font(.caption)
-                        .foregroundColor(Color("Alternative2"))
+                        .foregroundColor(Color("Secondary"))
                 }
                 .padding(8)
                 Spacer()
             }
         }
-        .background(Color("Secondary"))
+        .background(Color("Alternative2"))
         .cornerRadius(10)
         .padding(.trailing)
     }
