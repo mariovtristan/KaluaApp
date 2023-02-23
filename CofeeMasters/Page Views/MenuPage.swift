@@ -17,6 +17,14 @@ struct MenuPage: View {
                     ForEach(menuManager.menu) { category in
                         //here we are just displaying the name of the category
                         Text(category.name)
+                            .fontWeight(.bold)
+                            .padding()
+                            .font(.title3)
+                            .foregroundColor(Color("Secondary"))
+                            .background(Color("Primary"))
+                            .cornerRadius(10)
+                            .frame(maxWidth: .infinity)
+                            .padding()
                         
                         ForEach(category.products) { product in
                             NavigationLink {
