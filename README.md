@@ -1,4 +1,4 @@
 # KaluaApp
 App for Cafe 
 
-![](Kalua-App_Video.gif)
+![](Kalua_App_Video.gif)
